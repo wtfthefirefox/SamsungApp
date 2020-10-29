@@ -1,19 +1,21 @@
 import React from 'react';
 import styled from 'styled-components/native';
-import { SafeAreaView, ScrollView, View } from 'react-native';
+import { SafeAreaView, ScrollView } from 'react-native';
 
 import Header from './components/header';
 import NewsSlider from './components/newsSlider';
 import AboutSection from './components/aboutSection';
+import CatalogSlider from './components/catalogSlider';
 
 const App = () => {
   return (
     <SafeAreaView style={{backgroundColor: "#e6e6e6"}}>
-      <ScrollView style={{contentSize: {height: 1000, width: 375, backgroundColor: "#ffffff"}}}>
+      <ScrollView style={{contentSize: {height: 1500, width: 375, backgroundColor: "#ffffff"}}}>
         <AppContainer>
           <Header />
           <NewsSlider />
           <AboutSection />
+          <CatalogSlider />
         </AppContainer>
       </ScrollView>
     </SafeAreaView>
@@ -24,7 +26,10 @@ const AppContainer = styled.View`
   background-color: #ffffff;
   width: 100%;
   flex-direction: column;
-  padding: 15px 5px 0 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 20px;
 `;
 
 export default App;

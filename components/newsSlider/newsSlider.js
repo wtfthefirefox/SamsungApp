@@ -8,7 +8,7 @@ const NewsSlider = () => {
     return (
         <NewsSliderWrapper>
             <icons.PrevArrow />
-            <Image source={require('../../assets/img/36Gy2aThDCQVXxbX7yyRtF.jpg')} style={{width: 335, height: 188.44}} />
+            <Image source={require('../../assets/img/36Gy2aThDCQVXxbX7yyRtF.jpg')} style={{width: 315, height: 188.44}} />
             <icons.NextArrow />
         </NewsSliderWrapper>
     )
