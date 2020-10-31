@@ -9,9 +9,9 @@ const CatalogSlider = () => {
     <>
       <CatalogTitle CatalogTitle>Catalog</CatalogTitle>
       <SliderWrapper>
-        <icons.PrevArrow />
+        <icons.ArrowPrev />
         <Image source={require('../../assets/img/GalaxyA51.png')} style={{width: 200, height: 246}} />
-        <icons.NextArrow />
+        <icons.ArrowNext />
       </SliderWrapper>
       <CatalogItemTitle>Galaxy A71</CatalogItemTitle>
     </>
@@ -24,7 +24,7 @@ const CatalogTitle = styled.Text`
   line-height: 29px;
   color: #000000;
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 `;
 
 const SliderWrapper = styled.View`

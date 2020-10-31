@@ -1,9 +1,11 @@
 import BurgerMenu from './burgerMenu.svg';
-import NextArrow from './nextArrow.svg.svg';
-import PrevArrow from './prevArrow.svg';
+import ArrowNext from './arrowNext.svg';
+import ArrowPrev from './arrowPrev.svg';
+import ArrowUp from './arrowUp.svg';
 
 export default {
     "BurgerMenu": BurgerMenu,
-    "NextArrow": NextArrow,
-    "PrevArrow": PrevArrow
+    "ArrowNext": ArrowNext,
+    "ArrowPrev": ArrowPrev,
+    "ArrowUp": ArrowUp
 }

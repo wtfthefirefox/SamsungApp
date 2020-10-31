@@ -10,7 +10,7 @@ import CatalogSlider from './components/catalogSlider';
 const App = () => {
   return (
     <SafeAreaView style={{backgroundColor: "#e6e6e6"}}>
-      <ScrollView style={{contentSize: {height: 1500, width: 375, backgroundColor: "#ffffff"}}}>
+      <ScrollView style={{contentSize: {height: 1500, width: 375, backgroundColor: "#ffffff"}}} showsVerticalScrollIndicator={false}>
         <AppContainer>
           <Header />
           <NewsSlider />
