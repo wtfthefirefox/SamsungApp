@@ -1,19 +1,35 @@
-import React from 'react';
-import {Image} from 'react-native';
+import React, { useState } from 'react';
+import { Image, TouchableOpacity } from 'react-native';
 import styled from 'styled-components/native';
 
 import icons from '../../assets/svg/icons';
 
 const CatalogSlider = () => {
+  const [transformValue, changeTransformValue] = useState(0);
+
   return (
     <>
       <CatalogTitle CatalogTitle>Catalog</CatalogTitle>
       <SliderWrapper>
-        <icons.ArrowPrev />
-        <Image source={require('../../assets/img/GalaxyA51.png')} style={{width: 200, height: 246}} />
-        <icons.ArrowNext />
+        <TouchableOpacity onPress={() => changeTransformValue(val => val + 240 > 0 ? 0 : val + 240)}>
+          <icons.ArrowPrev  />
+        </TouchableOpacity>
+        <ItemsWrapperHidden>
+          <ItemsWrapper transfromXValue={transformValue}>
+            <ItemWrapper>
+              <Image source={require('../../assets/img/GalaxyA51.png')} style={{width: 200, height: 246}} />
+              <CatalogItemTitle>Galaxy A71</CatalogItemTitle>
+            </ItemWrapper>
+            <ItemWrapper last>
+              <Image source={require('../../assets/img/GalaxyA71.png')} style={{width: 200, height: 246}} />
+              <CatalogItemTitle>Galaxy A51</CatalogItemTitle>
+            </ItemWrapper>
+          </ItemsWrapper>
+        </ItemsWrapperHidden>
+        <TouchableOpacity onPress={() => changeTransformValue(val => val - 240 > -480 ? val - 240 : val)}>
+          <icons.ArrowNext  />
+        </TouchableOpacity>
       </SliderWrapper>
-      <CatalogItemTitle>Galaxy A71</CatalogItemTitle>
     </>
   )
 }
@@ -32,6 +48,25 @@ const SliderWrapper = styled.View`
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
+`;
+
+const ItemsWrapperHidden = styled.View`
+  max-width: 200;
+  overflow: hidden;
+  height: 246px;
+`;
+
+const ItemsWrapper = styled.View`
+  flex-direction: row;
+  justify-content: flex-start;
+  transform: ${props => `translateX(${props.transfromXValue}px)`};
+`;
+
+const ItemWrapper = styled.View`
+  width: 200px;
+  height: 246px;
+  flex-direction: column;
+  margin-right: ${props => props.last ? 0 : '40px'};
 `;
 
 const CatalogItemTitle = styled.Text`

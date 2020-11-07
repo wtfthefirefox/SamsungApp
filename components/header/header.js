@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {TouchableWithoutFeedback} from 'react-native';
+import { Link } from 'react-router-native';
 import styled from 'styled-components/native';
 
 import icons from '../../assets/svg/icons';
@@ -16,6 +17,11 @@ const Header = () => {
                     </TouchableWithoutFeedback>
                 </Wrapper>
                 <MenuWrapper>
+                    <MenuItem>
+                        <Link to="/">
+                            <MenuItemValue>Main Page</MenuItemValue>
+                        </Link>
+                    </MenuItem>
                     <MenuItem>
                         <MenuItemValue>About us</MenuItemValue>
                     </MenuItem>

@@ -1,24 +1,31 @@
 import React from 'react';
 import styled from 'styled-components/native';
 import { SafeAreaView, ScrollView } from 'react-native';
+import { NativeRouter, Route } from "react-router-native";
 
 import Header from './components/header';
 import NewsSlider from './components/newsSlider';
 import AboutSection from './components/aboutSection';
 import CatalogSlider from './components/catalogSlider';
+import AboutPage from './components/aboutPage';
 
 const App = () => {
   return (
-    <SafeAreaView style={{backgroundColor: "#e6e6e6"}}>
-      <ScrollView style={{contentSize: {height: 1500, width: 375, backgroundColor: "#ffffff"}}} showsVerticalScrollIndicator={false}>
-        <AppContainer>
-          <Header />
-          <NewsSlider />
-          <AboutSection />
-          <CatalogSlider />
-        </AppContainer>
-      </ScrollView>
-    </SafeAreaView>
+    <NativeRouter>
+      <SafeAreaView style={{backgroundColor: "#e6e6e6"}}>
+        <ScrollView showsVerticalScrollIndicator={false}>
+          <AppContainer>
+            <Header />
+            <Route exact path="/">
+              <NewsSlider />
+              <AboutSection />
+              <CatalogSlider />
+            </Route>
+            <Route path="/about" component={AboutPage} />
+          </AppContainer>
+        </ScrollView>
+      </SafeAreaView>
+    </NativeRouter>
   );
 }
 

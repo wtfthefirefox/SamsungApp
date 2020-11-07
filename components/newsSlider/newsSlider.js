@@ -7,11 +7,10 @@ import icons from '../../assets/svg/icons';
 const NewsSlider = () => {
     return (
         <NewsSliderWrapper>
-            <icons.ArrowPrev />
-            <ScrollView horizontal={true} >
-                <Image source={require('../../assets/img/36Gy2aThDCQVXxbX7yyRtF.jpg')} style={{width: 315, height: 188.44}} />
+            <ScrollView horizontal={true} style={{contentSize: {height: 1500, width: 375, backgroundColor: "#ffffff"}}} >
+                <Image source={require('../../assets/img/36Gy2aThDCQVXxbX7yyRtF.jpg')} style={{marginLeft: 20, width: 315, height: 188.44, marginRight: 40}} />
+                <Image source={require('../../assets/img/samsungWatch3.png')} style={{width: 315, height: 188.44, marginRight: 20}} />
             </ScrollView> 
-            <icons.ArrowNext />
         </NewsSliderWrapper>
     )
 }
