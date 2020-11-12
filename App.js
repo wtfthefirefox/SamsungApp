@@ -8,6 +8,7 @@ import NewsSlider from './components/newsSlider';
 import AboutSection from './components/aboutSection';
 import CatalogSlider from './components/catalogSlider';
 import AboutPage from './components/aboutPage';
+import itemPage from './components/itemPage';
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
               <CatalogSlider />
             </Route>
             <Route path="/about" component={AboutPage} />
+            <Route path="/item/1" component={itemPage} />
           </AppContainer>
         </ScrollView>
       </SafeAreaView>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Image, TouchableOpacity } from 'react-native';
+import { Link } from 'react-router-native';
 import styled from 'styled-components/native';
 
 import icons from '../../assets/svg/icons';
@@ -16,17 +17,27 @@ const CatalogSlider = () => {
         </TouchableOpacity>
         <ItemsWrapperHidden>
           <ItemsWrapper transfromXValue={transformValue}>
+            <Link to="/item/1">
+              <ItemWrapper>
+                <Image source={require('../../assets/img/GalaxyA51.png')} style={{width: 200, height: 246}} />
+                <CatalogItemTitle>Galaxy A71</CatalogItemTitle>
+              </ItemWrapper>
+            </Link>
             <ItemWrapper>
-              <Image source={require('../../assets/img/GalaxyA51.png')} style={{width: 200, height: 246}} />
-              <CatalogItemTitle>Galaxy A71</CatalogItemTitle>
-            </ItemWrapper>
-            <ItemWrapper last>
               <Image source={require('../../assets/img/GalaxyA71.png')} style={{width: 200, height: 246}} />
               <CatalogItemTitle>Galaxy A51</CatalogItemTitle>
             </ItemWrapper>
+            <ItemWrapper>
+              <Image source={require('../../assets/img/GalaxyNote10.png')} style={{width: 200, height: 246}} />
+              <CatalogItemTitle>Galaxy Note 10</CatalogItemTitle>
+            </ItemWrapper>
+            <ItemWrapper last>
+              <Image source={require('../../assets/img/GalaxyS20.png')} style={{width: 200, height: 246}} />
+              <CatalogItemTitle>Galaxy S 20</CatalogItemTitle>
+            </ItemWrapper>
           </ItemsWrapper>
         </ItemsWrapperHidden>
-        <TouchableOpacity onPress={() => changeTransformValue(val => val - 240 > -480 ? val - 240 : val)}>
+        <TouchableOpacity onPress={() => changeTransformValue(val => val - 240 > -960 ? val - 240 : val)}>
           <icons.ArrowNext  />
         </TouchableOpacity>
       </SliderWrapper>
