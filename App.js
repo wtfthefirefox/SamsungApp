@@ -16,8 +16,8 @@ const App = () => {
       <SafeAreaView style={{backgroundColor: "#e6e6e6"}}>
         <ScrollView showsVerticalScrollIndicator={false}>
           <AppContainer>
-            <Header />
             <Route exact path="/">
+              <Header />
               <NewsSlider />
               <AboutSection />
               <CatalogSlider />

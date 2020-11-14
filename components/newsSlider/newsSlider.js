@@ -2,8 +2,6 @@ import React from 'react';
 import { Image, ScrollView } from 'react-native';
 import styled from 'styled-components/native';
 
-import icons from '../../assets/svg/icons';
-
 const NewsSlider = () => {
     return (
         <NewsSliderWrapper>

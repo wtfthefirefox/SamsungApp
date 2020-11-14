@@ -13,7 +13,7 @@ const CatalogSlider = () => {
       <CatalogTitle CatalogTitle>Catalog</CatalogTitle>
       <SliderWrapper>
         <TouchableOpacity onPress={() => changeTransformValue(val => val + 240 > 0 ? 0 : val + 240)}>
-          <icons.ArrowPrev  />
+          <icons.ArrowPrev />
         </TouchableOpacity>
         <ItemsWrapperHidden>
           <ItemsWrapper transfromXValue={transformValue}>
@@ -37,8 +37,8 @@ const CatalogSlider = () => {
             </ItemWrapper>
           </ItemsWrapper>
         </ItemsWrapperHidden>
-        <TouchableOpacity onPress={() => changeTransformValue(val => val - 240 > -960 ? val - 240 : val)}>
-          <icons.ArrowNext  />
+        <TouchableOpacity onPress={() => changeTransformValue(val => val > -720 ? val - 240 : val)}>
+          <icons.ArrowNext />
         </TouchableOpacity>
       </SliderWrapper>
     </>
